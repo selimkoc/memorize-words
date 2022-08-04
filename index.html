@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebOrigo</title>
+  <link rel='stylesheet'  href='reset.css' media='all' />
+  <link rel='stylesheet'  href='weborigo.css' media='all' />
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="weborigo.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  <div class="header">
+    <img class="logo" src="./assets/weborigo.png" />
+  </div><!--   Header closed-->
+  <div class="content" id="content">
+  <div class="wrongCorrect">
+    <div class="correctCanvas">
+        <img src="./assets/images/correct.png"/> <span class="correct">0</span> / <span class="total">-1</span>
+      </div> <!-- correctCanvas -->
+    <div class="wrongCanvas">
+        <img src="./assets/images/wrong.png"/>   <span class="wrong">0</span> / <span class="total">-1</span>
+      </div>
+</div><!--  wrongCorrect -->
+<div class="bottomCanvas">
+      <div class="image center"></div>
+      <div class="keyword"></div>
+<div class="keywordInput center">
+  <input type="text" id="keyword" name="keyword">
+</div>
+<div class="answer">
+  answer
+</div>
+<div class="index">
+</div>
+<div class="checkButton center">
+  <a href="#" class="check">Let's See</a>
+</div>
+</div><!-- bottomCanvas -->
+</div> <!-- Content ends-->
+</div> <!-- Container ends-->
+
+  </body>
+  </html>

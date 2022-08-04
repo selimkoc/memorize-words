@@ -1,0 +1,149 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  padding: 0;
+  margin:0;
+
+}
+.container {
+  background-color: #ed712e;
+  border-radius: 7%;
+  margin-top:0;
+  padding-bottom:2.5em;
+}
+.header {
+  margin:0 0 2em 0;
+  text-align: center;
+}
+
+img.logo {
+  width: 91.57%;
+  height: auto;
+  margin-top:2em
+}
+.content{
+  background: white;
+   border-radius: 25px;
+   width:90%;
+   height: 100%;
+   margin:auto;
+
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  clear:both;
+}
+.image img{
+  width: 81.05vw;
+  height: auto;
+  border-radius: 10%;
+  margin-top:10px;
+}
+.wrongCorrect {
+  margin-right: -5vw;
+}
+.correctCanvas {
+  float:left;
+  color:#FF6700;
+  padding-left:20px;
+  margin-top:1em;
+}
+.correctCanvas img {
+  width:25%;
+  float:left;
+}
+
+.wrongCanvas {
+  float:right;
+  color:#FF6700;
+  margin-top:1em;
+  padding-right: 0;
+}
+.wrongCanvas img {
+  width: 25%;
+  float:left;
+}
+
+.keyword{
+  text-align: center;
+  color:#222222;
+  margin-top:1em;
+  font-size:1.6em;
+}
+
+.answer , .index {
+    display: none
+  }
+
+.keywordInput {
+  margin-top:1em;
+
+}
+
+input#keyword {
+  filter:drop-shadow(6px 6px 10px #E7BEA3);
+  height:2.25em;
+  width:13em;
+}
+
+.checkButton {
+  margin-top:1em;margin-bottom: 3em;
+  text-align: center;
+}
+.check {
+  width:12em;
+  background-color: #ed712e;
+  padding:.5em;
+  border-radius: 5px;
+  margin-bottom:1em;
+}
+a.check, a:visited.check {
+  color:white;
+  font-size:1em;
+  font-weight: 900;
+  text-decoration: none
+}
+
+
+@media screen and (min-width: 381px)  {
+
+.container {border-radius: 0}
+#content
+{display: flex;
+  flex-direction: column-reverse;
+}
+img.logo {
+  width:50vw
+}
+.correctCanvas{}
+.wrongCorrect{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.wrongCanvas{
+  float:left
+}
+.image img{
+  width:31.25%;
+    border-radius: 25px;
+}
+input#keyword {
+  width:50vw
+}
+}
+
+@media screen and (min-width: 1281px)  {
+  img.logo {
+    width:26.04%;
+  }
+  .image img{
+    width:36.45vw;
+    border-radius: 25px;
+  }
+}

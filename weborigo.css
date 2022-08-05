@@ -7,26 +7,31 @@ body {
 }
 .container {
   background-color: #ed712e;
-  border-radius: 7%;
+  border-radius: 1.56rem;
   margin-top:0;
-  padding-bottom:2.5em;
+  padding-bottom:2.69rem;
 }
 .header {
-  margin:0 0 2em 0;
+  margin:0 0 1.87rem 0;
   text-align: center;
 }
 
 img.logo {
-  width: 91.57%;
+  width: 21.75rem;
   height: auto;
-  margin-top:2em
+  margin-top:2.69rem;
+  max-width: 88.5%;
 }
 .content{
   background: white;
-   border-radius: 25px;
-   width:90%;
+   border-radius: 1.56rem;
+   width:91.57%;
    height: 100%;
    margin:auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 
 }
 .center {
@@ -34,45 +39,52 @@ img.logo {
   align-items: center;
   justify-content: center;
 }
-.image {
-  clear:both;
-}
 .image img{
-  width: 81.05vw;
+  width: 19.25rem;
+  max-width: 100%;
   height: auto;
-  border-radius: 10%;
-  margin-top:10px;
+  border-radius: 1.56rem;
+  margin-top:1.375rem;
 }
 .wrongCorrect {
-  margin-right: -5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 19.25rem;
+  max-width: 88.5%;
 }
 .correctCanvas {
-  float:left;
   color:#FF6700;
-  padding-left:20px;
-  margin-top:1em;
+  margin-top:1.375rem;
 }
 .correctCanvas img {
-  width:25%;
-  float:left;
+  vertical-align: middle;
+  width:1.12rem;
+  height: 1.12rem;
+}
+.correctCanvas span {
+  vertical-align: middle;
 }
 
 .wrongCanvas {
-  float:right;
   color:#FF6700;
-  margin-top:1em;
-  padding-right: 0;
+  margin-top:1.375rem;
 }
 .wrongCanvas img {
-  width: 25%;
-  float:left;
+  vertical-align: middle;
+  width: 1.12rem;
+  height: 1.12rem;
+
+}
+.wrongCanvas span {
+  vertical-align: middle;
 }
 
 .keyword{
   text-align: center;
   color:#222222;
-  margin-top:1em;
-  font-size:1.6em;
+  margin-top:1.25rem;
+  font-size:1rem;
 }
 
 .answer , .index {
@@ -80,30 +92,36 @@ img.logo {
   }
 
 .keywordInput {
-  margin-top:1em;
+  margin-top:1.25rem;
 
 }
 
 input#keyword {
   filter:drop-shadow(6px 6px 10px #E7BEA3);
-  height:2.25em;
-  width:13em;
+  height:2.25rem;
+  width:13rem;
+
+  border:white;
+  border-radius: 0.62rem
 }
 
 .checkButton {
-  margin-top:1em;margin-bottom: 3em;
-  text-align: center;
+  margin-top:1.875rem;
+
 }
 .check {
-  width:12em;
+  width:13rem;
+  height: 2.5rem;
   background-color: #ed712e;
-  padding:.5em;
-  border-radius: 5px;
-  margin-bottom:1em;
+display: flex;
+align-items: center;
+justify-content: center;
+  border-radius: 0.62rem;
+  margin-bottom:1.25rem;
 }
 a.check, a:visited.check {
   color:white;
-  font-size:1em;
+  font-size:1rem;
   font-weight: 900;
   text-decoration: none
 }
@@ -111,39 +129,105 @@ a.check, a:visited.check {
 
 @media screen and (min-width: 381px)  {
 
-.container {border-radius: 0}
+.container {
+  border-radius: 0
+}
 #content
-{display: flex;
+{
+  display: flex;
   flex-direction: column-reverse;
 }
+
 img.logo {
-  width:50vw
+  margin-top:3.12rem;
+}
+.header {
+  margin-bottom:3.12rem
+}
+.content{
+  width: 92.19%;
 }
 .correctCanvas{}
-.wrongCorrect{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
+.wrongCorrect{
+  width: 20rem;
+  margin-bottom: 2.25rem;
 }
-.wrongCanvas{
-  float:left
+.correctCanvas, .wrongCanvas{
+  margin-top:0;
+  font-size:1rem;
 }
+.wrongCanvas img, .correctCanvas img {
+  vertical-align: middle;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
 .image img{
-  width:31.25%;
-    border-radius: 25px;
+  width:25rem;
+  max-width: 81vw;
 }
-input#keyword {
-  width:50vw
+.keyword{
+  font-size:1.25rem;
 }
+ input#keyword{
+   width : 39.06vw;
+   height: 2.5rem;
+  font-size:1.25rem;
+ }
+ a.check, a:visited.check {
+   font-size:1.25rem;
+ }
+ .check {
+   width:15.62rem;
+   height: 3.125rem;
+ }
 }
 
 @media screen and (min-width: 1281px)  {
   img.logo {
-    width:26.04%;
+    width:31.25rem;
+    margin-top:3.12rem;
+  }
+  .header {
+    margin-bottom:3.12rem;
+  }
+  .content{
+    width: 80rem;
   }
   .image img{
-    width:36.45vw;
-    border-radius: 25px;
+    width:43.75rem;
   }
+  .keyword{
+    font-size:1.5rem;
+  }
+  input#keyword {
+    width:43.75rem;
+    height: 3.12rem;
+    padding:0;
+    font-size:1.5rem;
+  }
+
+  .check {
+    width:20.25rem;
+    height: 3.75rem;
+  }
+
+  .wrongCorrect{
+    width: 24rem;
+    margin-bottom: 3.25rem;
+  }
+  .correctCanvas, .wrongCanvas{
+    margin-top:0;
+    font-size:1.25rem;
+  }
+  .wrongCanvas img, .correctCanvas img {
+    vertical-align: middle;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  a.check, a:visited.check {
+    font-size:1.5rem;
+  }
+
 }

@@ -17,8 +17,8 @@ function get_random (list) {
 
 function get_item()
 {
-  var itemIndex =get_random(img)
-  var languageIndex = get_random(['en','sr']);
+  itemIndex =get_random(img)
+  languageIndex = get_random(['en','sr']);
 
   $('.image').html('<img src="./assets/images/'+img[itemIndex] +'"/>');
 
@@ -32,8 +32,6 @@ function get_item()
                   answer  = en[itemIndex]
               }
   $('.keyword').html(keyword);
-  $('.answer').html(answer);
-  $('.index').html(itemIndex);
   $('.total').html(  parseInt($('.total').html())+1    );
 
 }
@@ -49,11 +47,10 @@ $("input[name=keyword]").on("keydown", function(event) {
 
 $( ".check" ).click(function() {
 
-  correctAnswer = $('.answer').html();
-  itemIndex = $('.index').html();
+
   enteredValue = $( "input[name=keyword]" ).val();
 
-  if (enteredValue==correctAnswer){
+  if (enteredValue==answer){
     $('.correct').html(  parseInt($('.correct').html())+1    );
     // Remove item from indexes of arrays
      img.splice(itemIndex,1);
@@ -71,11 +68,5 @@ $( ".check" ).click(function() {
    $( "input[name=keyword]" ).val('');
    get_item();
 });
-
-//$(function() {
-  //     $('.check').trigger('click');
-  // });
-
-
 
 });

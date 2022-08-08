@@ -34,11 +34,7 @@ img.logo {
    justify-content: center;
 
 }
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .image img{
   width: 19.25rem;
   max-width: 100%;
@@ -79,7 +75,12 @@ img.logo {
 .wrongCanvas span {
   vertical-align: middle;
 }
-
+.bottomCanvas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .keyword{
   text-align: center;
   color:#222222;

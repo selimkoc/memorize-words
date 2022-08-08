@@ -9,6 +9,7 @@ var sr = [
 'srecan','lijepo','prijatelju','eksplozija','sargarepa','auto','vojnik',
 'strah','relativnost','knjiga','zemlja','ogranicenje brzine'
 ];
+var itemIndex, languageIndex, keyword, answer;
 $( document ).ready(function() {
 
 function get_random (list) {
@@ -17,7 +18,7 @@ function get_random (list) {
 
 function get_item()
 {
-  itemIndex =get_random(img)
+  itemIndex =get_random(img);
   languageIndex = get_random(['en','sr']);
 
   $('.image').html('<img src="./assets/images/'+img[itemIndex] +'"/>');
@@ -29,7 +30,7 @@ function get_item()
         } else
               {
                   keyword = sr[itemIndex];
-                  answer  = en[itemIndex]
+                  answer  = en[itemIndex];
               }
   $('.keyword').html(keyword);
   $('.total').html(  parseInt($('.total').html())+1    );
@@ -48,7 +49,7 @@ $("input[name=keyword]").on("keydown", function(event) {
 $( ".check" ).click(function() {
 
 
-  enteredValue = $( "input[name=keyword]" ).val();
+  var enteredValue = $( "input[name=keyword]" ).val();
 
   if (enteredValue==answer){
     $('.correct').html(  parseInt($('.correct').html())+1    );

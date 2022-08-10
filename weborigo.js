@@ -10,6 +10,7 @@ var sr = [
 'strah','relativnost','knjiga','zemlja','ogranicenje brzine'
 ];
 var itemIndex, languageIndex, keyword, answer;
+var notFirstRun = 1;
 $( document ).ready(function() {
 
 function get_random (list) {
@@ -34,10 +35,13 @@ function get_item()
               }
   $('.keyword').html(keyword);
   $('.total').html(  parseInt($('.total').html())+1    );
-
+  notFirstRun = 0;
 }
+// for the first run
 
-get_item();
+setTimeout(function() {
+        $( ".check" ).trigger( "click" );
+    },10);
 
 // Triggering check on enter
 $("input[name=keyword]").on("keydown", function(event) {
@@ -47,26 +51,27 @@ $("input[name=keyword]").on("keydown", function(event) {
 
 
 $( ".check" ).click(function() {
+  // not work on first run
+  if (!(notFirstRun)) {
+      var enteredValue = $( "input[name=keyword]" ).val();
 
-
-  var enteredValue = $( "input[name=keyword]" ).val();
-
-  if (enteredValue==answer){
-    $('.correct').html(  parseInt($('.correct').html())+1    );
-    // Remove item from indexes of arrays
-     img.splice(itemIndex,1);
-     en.splice(itemIndex,1);
-     sr.splice(itemIndex,1);
-     // game over page refreshes for new game
-     if (!(img.length)) {
-       alert('Game Over'); location.reload();
-     }
-  }
-   else {
-   $('.wrong').html(  parseInt($('.wrong').html())+1    );
+      if (enteredValue==answer){
+        $('.correct').html(  parseInt($('.correct').html())+1    );
+        // Remove item from indexes of arrays
+         img.splice(itemIndex,1);
+         en.splice(itemIndex,1);
+         sr.splice(itemIndex,1);
+         // game over page refreshes for new game
+         if (!(img.length)) {
+           alert('Game Over'); location.reload();
+         }
+      }
+       else {
+       $('.wrong').html(  parseInt($('.wrong').html())+1    );
+       }
+       // Reset input box to empty
+       $( "input[name=keyword]" ).val('');
    }
-   // Reset input box to empty
-   $( "input[name=keyword]" ).val('');
    get_item();
 });
 

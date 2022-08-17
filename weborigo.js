@@ -34,14 +34,10 @@ function get_item()
                   answer  = en[itemIndex];
               }
   $('.keyword').html(keyword);
-  $('.total').html(  parseInt($('.total').html())+1    );
+  $('.total').html( parseInt($('.total').html())+1 );
   notFirstRun = 0;
 }
-// for the first run
 
-setTimeout(function() {
-        $( ".check" ).trigger( "click" );
-    },10);
 
 // Triggering check on enter
 $("input[name=keyword]").on("keydown", function(event) {
@@ -67,12 +63,15 @@ $( ".check" ).click(function() {
          }
       }
        else {
-       $('.wrong').html(  parseInt($('.wrong').html())+1    );
+       $('.wrong').html( parseInt($('.wrong').html())+1 );
        }
        // Reset input box to empty
        $( "input[name=keyword]" ).val('');
    }
    get_item();
 });
+
+// for the first run
+   $( ".check" ).trigger( "click" );
 
 });

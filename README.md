@@ -2,7 +2,7 @@
 
 This project is converting a figma design to a simple app.
 
-No CSS framework is used, and it is coded ass mobile-first, responsive HTML5/CSS3 code.
+No CSS framework is used, and it is coded as mobile-first, responsive HTML5/CSS3 code.
 
 The app is a Javascript app which utilizes jQuery library.
 

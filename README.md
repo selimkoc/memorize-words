@@ -6,6 +6,8 @@ The app is a javascript app which utilizes jQuery library.
 
 User tries to answer meaning of words in Serbian & English languages. 
 
+Words are shown randomly in Serbian or in English. 
+
 If user answers correctly, the word is removed from the list (which is asked to user).
 
 If user answers correctly, thumps up count increases and if user answers wrongly thump down count increases.

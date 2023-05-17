@@ -1,8 +1,10 @@
 # Memorize words
 
-This project is figma design to mobile-first, responsive front-end conversion task with a simple app functionality.
+This project is converting a figma design to a simple app.
 
-The app is a javascript app which utilizes jQuery library.
+No CSS framework is used, and it is coded ass mobile-first, responsive HTML5/CSS3 code.
+
+The app is a Javascript app which utilizes jQuery library.
 
 User tries to answer meaning of words in Serbian & English languages. 
 
